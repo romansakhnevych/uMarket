@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Merriweather-Regular.ttf">
+            <string>Merriweather-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ItemDetailsView" customModule="uMarket" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="156"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD3-kQ-x05">
+                    <rect key="frame" x="10" y="10" width="46" height="21"/>
+                    <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
+                    <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDn-Vr-gZR">
+                    <rect key="frame" x="399" y="10" width="43" height="23"/>
+                    <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="18"/>
+                    <color key="textColor" red="0.50588235290000005" green="0.40000000000000002" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDv-ls-A4S">
+                    <rect key="frame" x="10" y="41" width="432" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvb-OS-uYX" customClass="CustomButton" customModule="uMarket" customModuleProvider="target">
+                    <rect key="frame" x="50" y="72" width="352" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="YKX-b1-H0k"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
+                    <state key="normal" title="Add to cart"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedbacks: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLF-PQ-mgX">
+                    <rect key="frame" x="10" y="122" width="432" height="24"/>
+                    <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="13"/>
+                    <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Cvb-OS-uYX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="99x-bP-pys"/>
+                <constraint firstItem="SDn-Vr-gZR" firstAttribute="top" secondItem="wD3-kQ-x05" secondAttribute="top" id="ADl-Ip-Fyp"/>
+                <constraint firstItem="iDv-ls-A4S" firstAttribute="leading" secondItem="wD3-kQ-x05" secondAttribute="leading" id="L4m-7V-0Fw"/>
+                <constraint firstItem="wD3-kQ-x05" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="U7J-Rx-Lwn"/>
+                <constraint firstItem="Cvb-OS-uYX" firstAttribute="top" secondItem="iDv-ls-A4S" secondAttribute="bottom" constant="10" id="XpK-rC-GS6"/>
+                <constraint firstItem="uLF-PQ-mgX" firstAttribute="top" secondItem="Cvb-OS-uYX" secondAttribute="bottom" constant="10" id="Z3c-GX-Hwl"/>
+                <constraint firstItem="uLF-PQ-mgX" firstAttribute="leading" secondItem="iDv-ls-A4S" secondAttribute="leading" id="f0V-jq-E5e"/>
+                <constraint firstAttribute="trailing" secondItem="Cvb-OS-uYX" secondAttribute="trailing" constant="50" id="nvN-27-OV1"/>
+                <constraint firstItem="iDv-ls-A4S" firstAttribute="top" secondItem="wD3-kQ-x05" secondAttribute="bottom" constant="10" id="pLL-ih-j62"/>
+                <constraint firstAttribute="trailing" secondItem="SDn-Vr-gZR" secondAttribute="trailing" constant="10" id="us9-vS-BMd"/>
+                <constraint firstItem="SDn-Vr-gZR" firstAttribute="trailing" secondItem="uLF-PQ-mgX" secondAttribute="trailing" id="v19-Gy-0bA"/>
+                <constraint firstAttribute="bottom" secondItem="uLF-PQ-mgX" secondAttribute="bottom" constant="10" id="vSc-RZ-HGO"/>
+                <constraint firstItem="wD3-kQ-x05" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="x4h-fA-UWl"/>
+                <constraint firstItem="SDn-Vr-gZR" firstAttribute="trailing" secondItem="iDv-ls-A4S" secondAttribute="trailing" id="zbZ-ac-3QV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="fullDescriptionLabel" destination="iDv-ls-A4S" id="q31-fB-t4G"/>
+                <outlet property="nameLabel" destination="wD3-kQ-x05" id="ADl-Oh-V02"/>
+                <outlet property="priceLabel" destination="SDn-Vr-gZR" id="JAe-Xu-1EL"/>
+            </connections>
+            <point key="canvasLocation" x="-47" y="327"/>
+        </view>
+    </objects>
+</document>

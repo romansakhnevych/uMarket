@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Merriweather-Regular.ttf">
+            <string>Merriweather-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="GJr-HN-6x2" customClass="ItemsHeaderView" customModule="uMarket" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="604" height="591"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gzU-rL-mkQ">
+                    <rect key="frame" x="0.0" y="0.0" width="604" height="591"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiE-qr-jxK">
+                    <rect key="frame" x="0.0" y="527.5" width="604" height="63.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2V-gc-VXc">
+                            <rect key="frame" x="10" y="10" width="481" height="25.5"/>
+                            <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5r-yz-XNf">
+                            <rect key="frame" x="501" y="9" width="93" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Feedbacks (10)">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="kyA-Qs-9fT">
+                            <rect key="frame" x="10" y="35.5" width="584" height="18"/>
+                            <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.30375107020547948" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="kyA-Qs-9fT" firstAttribute="leading" secondItem="T2V-gc-VXc" secondAttribute="leading" id="6Zz-nr-Cu0"/>
+                        <constraint firstItem="w5r-yz-XNf" firstAttribute="centerY" secondItem="T2V-gc-VXc" secondAttribute="centerY" id="7NX-Z5-Zjl"/>
+                        <constraint firstAttribute="bottom" secondItem="kyA-Qs-9fT" secondAttribute="bottom" constant="10" id="Dek-8M-9Wx"/>
+                        <constraint firstAttribute="trailing" secondItem="w5r-yz-XNf" secondAttribute="trailing" constant="10" id="Q0E-dR-a5I"/>
+                        <constraint firstItem="T2V-gc-VXc" firstAttribute="leading" secondItem="HiE-qr-jxK" secondAttribute="leading" constant="10" id="R0x-3G-BU9"/>
+                        <constraint firstItem="w5r-yz-XNf" firstAttribute="trailing" secondItem="kyA-Qs-9fT" secondAttribute="trailing" id="TwZ-p9-UC5"/>
+                        <constraint firstItem="T2V-gc-VXc" firstAttribute="top" secondItem="HiE-qr-jxK" secondAttribute="top" constant="10" id="n8h-7b-23g"/>
+                        <constraint firstItem="kyA-Qs-9fT" firstAttribute="top" secondItem="T2V-gc-VXc" secondAttribute="bottom" id="wKM-sa-tCE"/>
+                        <constraint firstItem="w5r-yz-XNf" firstAttribute="leading" secondItem="T2V-gc-VXc" secondAttribute="trailing" constant="10" id="yxA-qX-mFB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gzU-rL-mkQ" firstAttribute="leading" secondItem="GJr-HN-6x2" secondAttribute="leading" id="209-vr-HcG"/>
+                <constraint firstItem="HiE-qr-jxK" firstAttribute="leading" secondItem="GJr-HN-6x2" secondAttribute="leading" id="5Du-f3-vZg"/>
+                <constraint firstAttribute="bottom" secondItem="gzU-rL-mkQ" secondAttribute="bottom" id="Oar-m4-mB8"/>
+                <constraint firstAttribute="trailing" secondItem="HiE-qr-jxK" secondAttribute="trailing" id="SUf-Gz-5kf"/>
+                <constraint firstAttribute="trailing" secondItem="gzU-rL-mkQ" secondAttribute="trailing" id="dve-RH-vfd"/>
+                <constraint firstItem="gzU-rL-mkQ" firstAttribute="top" secondItem="GJr-HN-6x2" secondAttribute="top" id="e4J-q7-Ahf"/>
+                <constraint firstAttribute="bottom" secondItem="HiE-qr-jxK" secondAttribute="bottom" id="lbU-kB-Ram"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="kyA-Qs-9fT" id="jiw-5w-Qlv"/>
+                <outlet property="feedbacksButton" destination="w5r-yz-XNf" id="F6p-kv-Znv"/>
+                <outlet property="nameLabel" destination="T2V-gc-VXc" id="PBY-SD-8qg"/>
+                <outlet property="thumbImageView" destination="gzU-rL-mkQ" id="NNA-Sw-LZ8"/>
+            </connections>
+            <point key="canvasLocation" x="27" y="406.5"/>
+        </view>
+    </objects>
+</document>

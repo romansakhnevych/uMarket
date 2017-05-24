@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Merriweather-Bold.ttf">
+            <string>Merriweather-Bold</string>
+        </array>
+        <array key="Merriweather-Regular.ttf">
+            <string>Merriweather-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductItemCell" rowHeight="131" id="Gjm-ku-epz" customClass="ProductItemCell" customModule="uMarket" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gjm-ku-epz" id="zTD-fW-zOp">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="130.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwg-c8-DyP">
+                        <rect key="frame" x="10" y="10" width="110" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="5ns-IA-Phn"/>
+                            <constraint firstAttribute="height" constant="110" id="eGB-AE-6co"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-5J-aWs">
+                        <rect key="frame" x="140" y="10" width="176" height="21.5"/>
+                        <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
+                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="QaM-iU-4Vn">
+                        <rect key="frame" x="321" y="10" width="44" height="23"/>
+                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
+                        <color key="textColor" red="0.50588235290000005" green="0.40000000000000002" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="YRC-uv-BQt">
+                        <rect key="frame" x="140" y="31.5" width="225" height="18"/>
+                        <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="QaM-iU-4Vn" secondAttribute="trailing" constant="10" id="2YV-Vf-Izm"/>
+                    <constraint firstItem="g2f-5J-aWs" firstAttribute="top" secondItem="fwg-c8-DyP" secondAttribute="top" id="3mC-jx-wiP"/>
+                    <constraint firstItem="YRC-uv-BQt" firstAttribute="leading" secondItem="g2f-5J-aWs" secondAttribute="leading" id="Hxu-bk-Y8Z"/>
+                    <constraint firstItem="QaM-iU-4Vn" firstAttribute="top" secondItem="g2f-5J-aWs" secondAttribute="top" id="Ipc-DV-eeH"/>
+                    <constraint firstItem="g2f-5J-aWs" firstAttribute="leading" secondItem="fwg-c8-DyP" secondAttribute="trailing" constant="20" id="RU1-FG-bez"/>
+                    <constraint firstItem="QaM-iU-4Vn" firstAttribute="trailing" secondItem="YRC-uv-BQt" secondAttribute="trailing" id="Tus-mj-QTC"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YRC-uv-BQt" secondAttribute="bottom" constant="10" id="WmI-XR-VgQ"/>
+                    <constraint firstItem="QaM-iU-4Vn" firstAttribute="leading" secondItem="g2f-5J-aWs" secondAttribute="trailing" constant="5" id="pRj-zr-JHV"/>
+                    <constraint firstItem="YRC-uv-BQt" firstAttribute="top" secondItem="g2f-5J-aWs" secondAttribute="bottom" id="wmu-4c-gcT"/>
+                    <constraint firstItem="fwg-c8-DyP" firstAttribute="leading" secondItem="zTD-fW-zOp" secondAttribute="leading" constant="10" id="x4j-qx-9ca"/>
+                    <constraint firstItem="fwg-c8-DyP" firstAttribute="top" secondItem="zTD-fW-zOp" secondAttribute="top" constant="10" id="z79-J0-IdI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="g2f-5J-aWs" id="OGj-zV-ZxK"/>
+                <outlet property="priceLabel" destination="QaM-iU-4Vn" id="cxT-0d-YAp"/>
+                <outlet property="shortDescriptionLabel" destination="YRC-uv-BQt" id="Oq2-B3-7qf"/>
+                <outlet property="thumbImageView" destination="fwg-c8-DyP" id="wb0-1A-sEP"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
