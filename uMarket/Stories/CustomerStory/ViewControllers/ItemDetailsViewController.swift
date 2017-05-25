@@ -36,8 +36,6 @@ class ItemDetailsViewController: BaseViewController {
     
     private func setupTableView() {
         tableView.register(UINib.init(nibName: itemDetailsViewIdentifier, bundle: Bundle.init(for: ItemDetailsView.self)), forHeaderFooterViewReuseIdentifier: itemDetailsViewIdentifier)
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
@@ -76,11 +74,14 @@ extension ItemDetailsViewController: UICollectionViewDelegateFlowLayout {
 //MARK: - Table view data source, delegate
 extension ItemDetailsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0// productItem.feedbacks!.count
+        return productItem.feedbacks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: feedbackCellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: feedbackCellIdentifier, for: indexPath) as! FeedbackCell
+        let feedback = productItem.feedbacks[indexPath.row]
+        cell.fillWithModel(model: feedback)
+
         return cell
     }
     
@@ -95,6 +96,14 @@ extension ItemDetailsViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! ItemDetailsView
         headerView.fillWithModel(model: productItem)
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {

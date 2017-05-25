@@ -17,7 +17,7 @@ class Company: NSObject {
     init(dictionary: [String : Any]) {
         self.name = dictionary["name"] as? String
         self.companyDescriptions = dictionary["description"] as? String
-        self.items = ProductItem.parseItems(array: dictionary["items"] as! [[String:String]])
+        self.items = ProductItem.parseItems(array: dictionary["items"] as! Array<AnyObject> )
     }
     
     class func parseCompanies(array: [[String:Any]]) -> [Company] {

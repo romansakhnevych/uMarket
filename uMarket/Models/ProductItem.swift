@@ -13,21 +13,21 @@ class ProductItem: NSObject {
     var shortDescription: String?
     var fullDescription: String?
     var price: String?
-//    var feedbacks: [Feedback]?
+    var feedbacks: [Feedback] = []
     
-    init(dictionary: [String:String]) {
-        self.name = dictionary["name"]!
-        self.shortDescription = dictionary["description"]!
-        self.fullDescription = dictionary["fullDescription"]!
-        self.price = dictionary["price"]!
-//        self.feedbacks = Feedback.parseFeedbacks(array: dictionary["feedbacks"] as! [[String:String]])
+    init(dictionary: [String:Any]) {
+        self.name = dictionary["name"]! as? String
+        self.shortDescription = dictionary["description"]! as? String
+        self.fullDescription = dictionary["fullDescription"]! as? String
+        self.price = dictionary["price"]! as? String
+        self.feedbacks = Feedback.parseFeedbacks(array: dictionary["feedbacks"] as! [[String:String]])
         super.init()
     }
     
-    class func parseItems(array: [[String:String]]) -> [ProductItem] {
+    class func parseItems(array: Array<AnyObject>) -> [ProductItem] {
         var items = [ProductItem]()
         for item in array {
-            let productItem = ProductItem.init(dictionary: item)
+            let productItem = ProductItem.init(dictionary: item as! [String : Any])
             items.append(productItem)
         }
         return items

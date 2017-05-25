@@ -17,4 +17,9 @@ class BaseViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    //MARK: - IBActions
+    @IBAction func backAction(sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }

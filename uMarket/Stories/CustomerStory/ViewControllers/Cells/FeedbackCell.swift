@@ -16,6 +16,8 @@ class FeedbackCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        authorPictureImageView.layer.cornerRadius = authorPictureImageView.frame.height / 2
+        authorPictureImageView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

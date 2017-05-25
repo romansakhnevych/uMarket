@@ -15,7 +15,7 @@ class ProductItemServices: NSObject {
         if let path = Bundle.main.path(forResource: "CartItems", ofType: "plist") {
             if let array = NSArray(contentsOfFile: path) as? [[String: Any]] {
                 for item in array {
-                    let pitem = ProductItem.init(dictionary: item as! [String : String])
+                    let pitem = ProductItem.init(dictionary: item)
                     items.append(pitem)
                 }
             }
@@ -28,7 +28,7 @@ class ProductItemServices: NSObject {
         if let path = Bundle.main.path(forResource: "WishItems", ofType: "plist") {
             if let array = NSArray(contentsOfFile: path) as? [[String: Any]] {
                 for item in array {
-                    let pitem = ProductItem.init(dictionary: item as! [String : String])
+                    let pitem = ProductItem.init(dictionary: item)
                     items.append(pitem)
                 }
             }

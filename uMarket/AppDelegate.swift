@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.barTintColor = UIColor.mainColor()
         navigationBarAppearance.tintColor = UIColor.white
         navigationBarAppearance.isTranslucent = false
-        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName: UIFont(name: "Merriweather-Regular", size: 17)!]
     }
 }
 
