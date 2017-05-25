@@ -191,7 +191,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCell" id="hc0-cN-cAC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCell" id="hc0-cN-cAC">
                                         <rect key="frame" x="0.0" y="271.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hc0-cN-cAC" id="zVJ-5u-o3x">
@@ -219,11 +219,196 @@
                         <outlet property="fullNameLabel" destination="dUj-KK-9Nu" id="rBf-Xf-SoP"/>
                         <outlet property="userPhotoImageView" destination="Qxc-3D-BaF" id="8eA-gj-Nak"/>
                         <outlet property="usernameLabel" destination="Z8D-J7-r8s" id="cJb-lR-4q6"/>
+                        <segue destination="tCp-9F-CJZ" kind="show" identifier="profileToPaymentInfoSegueIdentifier" id="uX7-wV-OJ6"/>
+                        <segue destination="aBM-HR-m3R" kind="show" identifier="profileToDeliveryInfoSegueIdentifier" id="75X-LP-3iS"/>
+                        <segue destination="31o-xz-3Vn" kind="show" identifier="profileToHistorySegueIdentifier" id="JyL-jK-cMI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJk-wS-S5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="968.79999999999995" y="1133.8830584707648"/>
+        </scene>
+        <!--HISTORY-->
+        <scene sceneID="eoN-GD-TI4">
+            <objects>
+                <viewController id="31o-xz-3Vn" customClass="HistoryViewController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hdJ-gy-eYm"/>
+                        <viewControllerLayoutGuide type="bottom" id="NKN-hZ-L1T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k9n-Fw-6P1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HISTORY" id="q2K-VI-H2P">
+                        <barButtonItem key="leftBarButtonItem" image="Back Filled-50" id="5fi-us-3kA">
+                            <connections>
+                                <action selector="backActionWithSender:" destination="31o-xz-3Vn" id="5xQ-kK-lNb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erA-uh-MZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2150" y="1270"/>
+        </scene>
+        <!--DELIVERY INFO-->
+        <scene sceneID="VKm-QT-DuZ">
+            <objects>
+                <viewController id="aBM-HR-m3R" customClass="DeliveryInfoViewController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sfC-sy-e5a"/>
+                        <viewControllerLayoutGuide type="bottom" id="cAi-4U-irr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Syu-zx-BFk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DELIVERY INFO" id="GrZ-EN-hIe">
+                        <barButtonItem key="leftBarButtonItem" image="Back Filled-50" id="5PC-b0-egI">
+                            <connections>
+                                <action selector="backActionWithSender:" destination="aBM-HR-m3R" id="l8I-0g-weY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1u6-tl-83H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="584"/>
+        </scene>
+        <!--PAYMENT INFO-->
+        <scene sceneID="kNB-Il-lTK">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tCp-9F-CJZ" customClass="PaymentInfoViewController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0te-Ff-jxg"/>
+                        <viewControllerLayoutGuide type="bottom" id="T46-FZ-oyl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qwb-tD-WIa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Hb8-sP-jG4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentCell" id="wtn-24-KQr">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wtn-24-KQr" id="6TA-at-vrm">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tCp-9F-CJZ" id="oRB-zN-dEh"/>
+                                    <outlet property="delegate" destination="tCp-9F-CJZ" id="N2E-hj-jcu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T46-FZ-oyl" firstAttribute="top" secondItem="Hb8-sP-jG4" secondAttribute="bottom" id="Op1-Lv-cyF"/>
+                            <constraint firstItem="Hb8-sP-jG4" firstAttribute="leading" secondItem="Qwb-tD-WIa" secondAttribute="leading" id="nRE-a6-4Pi"/>
+                            <constraint firstAttribute="trailing" secondItem="Hb8-sP-jG4" secondAttribute="trailing" id="rTR-IM-21J"/>
+                            <constraint firstItem="Hb8-sP-jG4" firstAttribute="top" secondItem="0te-Ff-jxg" secondAttribute="bottom" id="yTS-he-xzM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PAYMENT INFO" id="NE5-xa-8cI">
+                        <barButtonItem key="leftBarButtonItem" image="Back Filled-50" id="ZLP-UF-Mln">
+                            <connections>
+                                <action selector="backActionWithSender:" destination="tCp-9F-CJZ" id="d1v-u9-vSH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WCG-ZM-vhL">
+                            <connections>
+                                <segue destination="TDV-b0-aUO" kind="show" id="5jZ-Bm-JqC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKQ-Uv-dor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="-89"/>
+        </scene>
+        <!--PAYMENT METHOD-->
+        <scene sceneID="tU7-AK-i0N">
+            <objects>
+                <viewController id="TDV-b0-aUO" customClass="NewPaymentMethodViewController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rrs-N0-zYc"/>
+                        <viewControllerLayoutGuide type="bottom" id="XB8-Vg-Cxx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c62-WS-9yN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CARD NUMBER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZN-kv-tcU">
+                                <rect key="frame" x="20" y="84" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cMa-wu-Kwh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DATE (MM/YY)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urp-64-m0C">
+                                <rect key="frame" x="20" y="148" width="151.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="E6i-Zp-eR5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-tZ-YGo">
+                                <rect key="frame" x="300" y="148" width="55" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wDu-Cr-k10"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kh-CL-OfA" customClass="CustomButton" customModule="uMarket" customModuleProvider="target">
+                                <rect key="frame" x="20" y="212" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="qfY-nx-ioS"/>
+                                </constraints>
+                                <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="addAction:" destination="TDV-b0-aUO" eventType="touchUpInside" id="4nX-7e-a8R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="urp-64-m0C" firstAttribute="leading" secondItem="kZN-kv-tcU" secondAttribute="leading" id="15Z-Sd-bPj"/>
+                            <constraint firstItem="kZN-kv-tcU" firstAttribute="top" secondItem="Rrs-N0-zYc" secondAttribute="bottom" constant="20" id="7Wl-kj-CB2"/>
+                            <constraint firstItem="kiD-tZ-YGo" firstAttribute="trailing" secondItem="kZN-kv-tcU" secondAttribute="trailing" id="82C-Bp-m7t"/>
+                            <constraint firstItem="urp-64-m0C" firstAttribute="top" secondItem="kZN-kv-tcU" secondAttribute="bottom" constant="20" id="85x-SF-gAV"/>
+                            <constraint firstItem="kZN-kv-tcU" firstAttribute="leading" secondItem="c62-WS-9yN" secondAttribute="leading" constant="20" id="Fne-my-2vN"/>
+                            <constraint firstItem="kiD-tZ-YGo" firstAttribute="top" secondItem="urp-64-m0C" secondAttribute="top" id="OcJ-TF-eWt"/>
+                            <constraint firstItem="7Kh-CL-OfA" firstAttribute="top" secondItem="urp-64-m0C" secondAttribute="bottom" constant="20" id="WPT-hh-m9C"/>
+                            <constraint firstItem="kiD-tZ-YGo" firstAttribute="trailing" secondItem="7Kh-CL-OfA" secondAttribute="trailing" id="ZpO-S5-H9n"/>
+                            <constraint firstAttribute="trailing" secondItem="kZN-kv-tcU" secondAttribute="trailing" constant="20" id="aL7-cV-rpZ"/>
+                            <constraint firstItem="7Kh-CL-OfA" firstAttribute="leading" secondItem="urp-64-m0C" secondAttribute="leading" id="wVr-yy-e8s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PAYMENT METHOD" id="Lbl-IZ-TjK">
+                        <barButtonItem key="leftBarButtonItem" image="Back Filled-50" id="FBk-18-0cJ">
+                            <connections>
+                                <action selector="backActionWithSender:" destination="TDV-b0-aUO" id="9m5-xH-Urc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTG-PA-DN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2887" y="-90"/>
         </scene>
         <!--CATEGORIES-->
         <scene sceneID="LHx-rC-VXc">

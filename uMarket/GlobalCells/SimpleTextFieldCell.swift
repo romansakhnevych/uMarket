@@ -1,0 +1,23 @@
+//
+//  SimpleTextFieldCell.swift
+//  5PA
+//
+//  Created by Roman Sakhnievych on 10/24/16.
+//
+//
+
+import UIKit
+
+class SimpleTextFieldCell: UITableViewCell {
+    
+    //MARK: - Outlets
+    @IBOutlet weak var textField: UITextField!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+}

@@ -13,6 +13,10 @@ class CustomerProfileViewController: BaseViewController {
     let profileCellIdentifier = "ProfileCell"
     let titles = ["PAYMENT INFO", "DELIVERY INFO", "HISTORY"]
     
+    let profileToPaymentInfoSegueIdentifier = "profileToPaymentInfoSegueIdentifier"
+    let profileToDeliveryInfoSegueIdentifier = "profileToDeliveryInfoSegueIdentifier"
+    let profileToHistorySegueIdentifier = "profileToHistorySegueIdentifier"
+    
     @IBOutlet weak var userPhotoImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -67,6 +71,25 @@ extension CustomerProfileViewController: UITableViewDelegate, UITableViewDataSou
         cell.textLabel?.text = title
         cell.imageView?.image = UIImage.init(named: imageName)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            return
+        }
+        var identifier: String!
+        switch indexPath.row {
+        case 0:
+            identifier = profileToPaymentInfoSegueIdentifier
+        case 1:
+            identifier = profileToDeliveryInfoSegueIdentifier
+        case 2:
+            identifier = profileToHistorySegueIdentifier
+        default:
+            print("undefined row")
+        }
+        
+        self.performSegue(withIdentifier: identifier, sender: self)
     }
     
 }

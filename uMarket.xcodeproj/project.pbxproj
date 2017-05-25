@@ -22,6 +22,12 @@
 		3C1AF0631ED4D667003F3253 /* ProductItemServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AF0621ED4D667003F3253 /* ProductItemServices.swift */; };
 		3C1AF0651ED5B45F003F3253 /* FeedbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AF0641ED5B45F003F3253 /* FeedbackCell.swift */; };
 		3C1AF0671ED5B588003F3253 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AF0661ED5B588003F3253 /* Feedback.swift */; };
+		3C1AF0691ED6FF50003F3253 /* DeliveryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AF0681ED6FF50003F3253 /* DeliveryInfoViewController.swift */; };
+		3C1AF06B1ED6FF7D003F3253 /* PaymentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AF06A1ED6FF7D003F3253 /* PaymentInfoViewController.swift */; };
+		3C1AF06D1ED7001B003F3253 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AF06C1ED7001B003F3253 /* HistoryViewController.swift */; };
+		3C1AF0731ED704A8003F3253 /* SimpleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AF0711ED704A8003F3253 /* SimpleTextFieldCell.swift */; };
+		3C1AF0741ED704A8003F3253 /* SimpleTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1AF0721ED704A8003F3253 /* SimpleTextFieldCell.xib */; };
+		3C1AF0761ED708EC003F3253 /* NewPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AF0751ED708EC003F3253 /* NewPaymentMethodViewController.swift */; };
 		3C693E871EC741DC0051E946 /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C693E861EC741DC0051E946 /* CompaniesViewController.swift */; };
 		3C693E891EC745F60051E946 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C693E881EC745F60051E946 /* CompanyCell.swift */; };
 		3C693E8C1ECB04770051E946 /* CompaniesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C693E8B1ECB04770051E946 /* CompaniesHeaderView.swift */; };
@@ -89,6 +95,12 @@
 		3C1AF0621ED4D667003F3253 /* ProductItemServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductItemServices.swift; path = Networking/ProductItemServices.swift; sourceTree = "<group>"; };
 		3C1AF0641ED5B45F003F3253 /* FeedbackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackCell.swift; path = Stories/CustomerStory/ViewControllers/Cells/FeedbackCell.swift; sourceTree = "<group>"; };
 		3C1AF0661ED5B588003F3253 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feedback.swift; path = Models/Feedback.swift; sourceTree = "<group>"; };
+		3C1AF0681ED6FF50003F3253 /* DeliveryInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryInfoViewController.swift; path = Stories/CustomerStory/ViewControllers/DeliveryInfoViewController.swift; sourceTree = "<group>"; };
+		3C1AF06A1ED6FF7D003F3253 /* PaymentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentInfoViewController.swift; path = Stories/CustomerStory/ViewControllers/PaymentInfoViewController.swift; sourceTree = "<group>"; };
+		3C1AF06C1ED7001B003F3253 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Stories/CustomerStory/ViewControllers/HistoryViewController.swift; sourceTree = "<group>"; };
+		3C1AF0711ED704A8003F3253 /* SimpleTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleTextFieldCell.swift; path = GlobalCells/SimpleTextFieldCell.swift; sourceTree = "<group>"; };
+		3C1AF0721ED704A8003F3253 /* SimpleTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleTextFieldCell.xib; path = GlobalCells/SimpleTextFieldCell.xib; sourceTree = "<group>"; };
+		3C1AF0751ED708EC003F3253 /* NewPaymentMethodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPaymentMethodViewController.swift; path = Stories/CustomerStory/ViewControllers/NewPaymentMethodViewController.swift; sourceTree = "<group>"; };
 		3C693E861EC741DC0051E946 /* CompaniesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompaniesViewController.swift; path = Stories/CustomerStory/ViewControllers/CompaniesViewController.swift; sourceTree = "<group>"; };
 		3C693E881EC745F60051E946 /* CompanyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompanyCell.swift; path = Stories/CustomerStory/ViewControllers/Cells/CompanyCell.swift; sourceTree = "<group>"; };
 		3C693E8B1ECB04770051E946 /* CompaniesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompaniesHeaderView.swift; path = Stories/CustomerStory/ViewControllers/Views/CompaniesHeaderView.swift; sourceTree = "<group>"; };
@@ -174,6 +186,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		3C1AF0701ED70492003F3253 /* GlobalCells */ = {
+			isa = PBXGroup;
+			children = (
+				3C1AF0711ED704A8003F3253 /* SimpleTextFieldCell.swift */,
+				3C1AF0721ED704A8003F3253 /* SimpleTextFieldCell.xib */,
+			);
+			name = GlobalCells;
+			sourceTree = "<group>";
+		};
 		3C693E8A1ECB039F0051E946 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +244,7 @@
 		3C78C9D61EA14ECD00333548 /* uMarket */ = {
 			isa = PBXGroup;
 			children = (
+				3C1AF0701ED70492003F3253 /* GlobalCells */,
 				3C1AF0511ED47F46003F3253 /* Views */,
 				3C8CF0271ECE3F2C007A667A /* Networking */,
 				3C693E911ECCD09D0051E946 /* Models */,
@@ -344,6 +366,10 @@
 				3C693E861EC741DC0051E946 /* CompaniesViewController.swift */,
 				3C1AF0471ED08825003F3253 /* ProductItemsViewController.swift */,
 				3C1AF04D1ED36741003F3253 /* ItemDetailsViewController.swift */,
+				3C1AF0681ED6FF50003F3253 /* DeliveryInfoViewController.swift */,
+				3C1AF06A1ED6FF7D003F3253 /* PaymentInfoViewController.swift */,
+				3C1AF06C1ED7001B003F3253 /* HistoryViewController.swift */,
+				3C1AF0751ED708EC003F3253 /* NewPaymentMethodViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -509,6 +535,7 @@
 				3C1AF05D1ED4CBE3003F3253 /* CartItems.plist in Resources */,
 				3CE790F01EA969AE00B5B836 /* GoogleService-Info.plist in Resources */,
 				3C78C9DF1EA14ECD00333548 /* Assets.xcassets in Resources */,
+				3C1AF0741ED704A8003F3253 /* SimpleTextFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,19 +699,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C940E6E1EB8CBB70054AD89 /* CustomerTabBarController.swift in Sources */,
+				3C1AF06D1ED7001B003F3253 /* HistoryViewController.swift in Sources */,
 				3C78C9D81EA14ECD00333548 /* AppDelegate.swift in Sources */,
 				3C1AF04A1ED2DF15003F3253 /* ItemsHeaderView.swift in Sources */,
 				3C1AF0551ED4A33A003F3253 /* ItemDetailsView.swift in Sources */,
 				3C1AF0501ED43994003F3253 /* ItemPhotoCell.swift in Sources */,
 				3C940E681EB8C52B0054AD89 /* UICollorExtentions.swift in Sources */,
+				3C1AF0731ED704A8003F3253 /* SimpleTextFieldCell.swift in Sources */,
 				3C940E6C1EB8C8BB0054AD89 /* UIImageExtention.swift in Sources */,
 				3C1AF0461ED087AA003F3253 /* ProductItemCell.swift in Sources */,
 				3C940E701EB8CD210054AD89 /* CartViewController.swift in Sources */,
+				3C1AF0761ED708EC003F3253 /* NewPaymentMethodViewController.swift in Sources */,
 				3C1AF0631ED4D667003F3253 /* ProductItemServices.swift in Sources */,
 				3C693E8C1ECB04770051E946 /* CompaniesHeaderView.swift in Sources */,
 				3C940E6A1EB8C8610054AD89 /* BaseTabBarController.swift in Sources */,
 				3C693E871EC741DC0051E946 /* CompaniesViewController.swift in Sources */,
 				3CE790FC1EAE7EC300B5B836 /* BaseViewController.swift in Sources */,
+				3C1AF0691ED6FF50003F3253 /* DeliveryInfoViewController.swift in Sources */,
 				3C940E721EB8CD4C0054AD89 /* WishListViewController.swift in Sources */,
 				3C693E891EC745F60051E946 /* CompanyCell.swift in Sources */,
 				3C693E981ECE2B860051E946 /* Category.swift in Sources */,
@@ -693,6 +724,7 @@
 				3C1AF0651ED5B45F003F3253 /* FeedbackCell.swift in Sources */,
 				3C1AF04E1ED36741003F3253 /* ItemDetailsViewController.swift in Sources */,
 				3C8CF0291ECE3F58007A667A /* CategoryServices.swift in Sources */,
+				3C1AF06B1ED6FF7D003F3253 /* PaymentInfoViewController.swift in Sources */,
 				3C693E931ECCD0EB0051E946 /* ProductItem.swift in Sources */,
 				3C1AF0531ED47F69003F3253 /* CustomButton.swift in Sources */,
 				3CE790FE1EAE7F4900B5B836 /* CategoriesViewController.swift in Sources */,

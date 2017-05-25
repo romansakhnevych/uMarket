@@ -21,6 +21,7 @@ class CustomButton: UIButton {
         self.layer.masksToBounds = false
         self.backgroundColor = UIColor.mainColor()
         self.tintColor = UIColor.white
+        self.titleLabel?.font = UIFont(name: "Merriweather-Regular", size: 17)!
     }
 
 }
