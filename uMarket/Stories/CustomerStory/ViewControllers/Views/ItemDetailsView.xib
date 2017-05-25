@@ -46,27 +46,36 @@
                     <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
                     <state key="normal" title="Add to cart"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEEDBACKS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLF-PQ-mgX">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEEDBACKS (2)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLF-PQ-mgX">
                     <rect key="frame" x="10" y="122.5" width="432" height="23.5"/>
                     <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="13"/>
                     <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTM-XA-zDM">
+                    <rect key="frame" x="315" y="119.5" width="127" height="30"/>
+                    <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="14"/>
+                    <state key="normal" title="LEAVE FEEDBACK">
+                        <color key="titleColor" red="0.50588235290000005" green="0.40000000000000002" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="Cvb-OS-uYX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="99x-bP-pys"/>
                 <constraint firstItem="SDn-Vr-gZR" firstAttribute="top" secondItem="wD3-kQ-x05" secondAttribute="top" id="ADl-Ip-Fyp"/>
                 <constraint firstItem="iDv-ls-A4S" firstAttribute="leading" secondItem="wD3-kQ-x05" secondAttribute="leading" id="L4m-7V-0Fw"/>
                 <constraint firstItem="wD3-kQ-x05" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="U7J-Rx-Lwn"/>
+                <constraint firstItem="YTM-XA-zDM" firstAttribute="trailing" secondItem="uLF-PQ-mgX" secondAttribute="trailing" id="X20-fr-afx"/>
                 <constraint firstItem="Cvb-OS-uYX" firstAttribute="top" secondItem="iDv-ls-A4S" secondAttribute="bottom" constant="10" id="XpK-rC-GS6"/>
                 <constraint firstItem="uLF-PQ-mgX" firstAttribute="top" secondItem="Cvb-OS-uYX" secondAttribute="bottom" constant="10" id="Z3c-GX-Hwl"/>
                 <constraint firstItem="uLF-PQ-mgX" firstAttribute="leading" secondItem="iDv-ls-A4S" secondAttribute="leading" id="f0V-jq-E5e"/>
                 <constraint firstAttribute="trailing" secondItem="Cvb-OS-uYX" secondAttribute="trailing" constant="50" id="nvN-27-OV1"/>
                 <constraint firstItem="iDv-ls-A4S" firstAttribute="top" secondItem="wD3-kQ-x05" secondAttribute="bottom" constant="10" id="pLL-ih-j62"/>
                 <constraint firstAttribute="trailing" secondItem="SDn-Vr-gZR" secondAttribute="trailing" constant="10" id="us9-vS-BMd"/>
-                <constraint firstItem="SDn-Vr-gZR" firstAttribute="trailing" secondItem="uLF-PQ-mgX" secondAttribute="trailing" id="v19-Gy-0bA"/>
                 <constraint firstAttribute="bottom" secondItem="uLF-PQ-mgX" secondAttribute="bottom" constant="10" id="vSc-RZ-HGO"/>
+                <constraint firstItem="YTM-XA-zDM" firstAttribute="centerY" secondItem="uLF-PQ-mgX" secondAttribute="centerY" id="wp6-b0-Ms1"/>
                 <constraint firstItem="wD3-kQ-x05" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="x4h-fA-UWl"/>
+                <constraint firstItem="SDn-Vr-gZR" firstAttribute="trailing" secondItem="uLF-PQ-mgX" secondAttribute="trailing" id="ywn-mK-vmC"/>
                 <constraint firstItem="SDn-Vr-gZR" firstAttribute="trailing" secondItem="iDv-ls-A4S" secondAttribute="trailing" id="zbZ-ac-3QV"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
