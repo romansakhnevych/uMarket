@@ -13,7 +13,11 @@ class ItemDetailsViewController: BaseViewController {
     let itemPhotoCellIdentifier = String.init(describing: ItemPhotoCell.self)
     let itemDetailsViewIdentifier = String.init(describing: ItemDetailsView.self)
     let feedbackCellIdentifier = String.init(describing: FeedbackCell.self)
+    let images = ["Business folio", "bf2", "bf3"]
+    var canAdd = false
     
+    
+    @IBOutlet weak var pageControl: UIPageControl!
     var productItem: ProductItem!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
@@ -30,6 +34,7 @@ class ItemDetailsViewController: BaseViewController {
     
     //MARK: - Setup
     private func setupCollectionView() {
+        collectionView.register(UINib.init(nibName: itemPhotoCellIdentifier, bundle: Bundle.init(for: ItemPhotoCell.self)), forCellWithReuseIdentifier: itemPhotoCellIdentifier)
         collectionViewHeightConstraint.constant = view.frame.width/1.8
         view.layoutIfNeeded()
     }
@@ -37,18 +42,41 @@ class ItemDetailsViewController: BaseViewController {
     private func setupTableView() {
         tableView.register(UINib.init(nibName: itemDetailsViewIdentifier, bundle: Bundle.init(for: ItemDetailsView.self)), forHeaderFooterViewReuseIdentifier: itemDetailsViewIdentifier)
     }
+    
+    func showAlert()  {
+        showAlertControllerCart(withTitle: "", message: "Item was added to cart", okHandler: nil) {
+           
+            let tbc = self.navigationController?.tabBarController
+            
+            self.navigationController?.popToRootViewController(animated: true)
+        
+        }
+    }
+    
+    func showLogin() {
+        let signInController = UIStoryboard.init(name: "Login", bundle: Bundle.main).instantiateViewController(withIdentifier: "lvc")
+        self.present(signInController, animated: true) { 
+            self.canAdd = true
+        }
+        
+    }
 }
 
 //MARK: - Collection view data source and delegate
 extension ItemDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: itemPhotoCellIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: itemPhotoCellIdentifier, for: indexPath) as! ItemPhotoCell
+        cell.imageView.image = UIImage.init(named: images[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        pageControl.currentPage = indexPath.row
     }
 }
 
@@ -71,6 +99,16 @@ extension ItemDetailsViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension ItemDetailsViewController: ItemDetailsViewDelegate {
+    func didAddItem() {
+        if canAdd {
+        self.showAlert()
+        } else {
+            self.showLogin()
+        }
+    }
+}
+
 //MARK: - Table view data source, delegate
 extension ItemDetailsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,12 +124,14 @@ extension ItemDetailsViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: itemDetailsViewIdentifier)
+        var headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: itemDetailsViewIdentifier) as? ItemDetailsView
         if headerView == nil {
             headerView = ItemDetailsView.loadFromNib()
         }
+        headerView?.delegate = self
         return headerView
     }
+    
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! ItemDetailsView

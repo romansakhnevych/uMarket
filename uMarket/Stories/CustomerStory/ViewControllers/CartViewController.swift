@@ -11,6 +11,8 @@ import UIKit
 class CartViewController: BaseViewController {
     
     let productItemCellIdentifier = String.init(describing: ProductItemCell.self)
+    var paymentVerified = false
+    var deliveryInfoVerified = false
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,6 +28,22 @@ class CartViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+  
+    @IBAction func checkOut(_ sender: Any) {
+        if paymentVerified == false {
+            performSegue(withIdentifier: "pay", sender: self)
+            paymentVerified = true
+        } else if deliveryInfoVerified == false {
+                performSegue(withIdentifier: "deliver", sender: self)
+            deliveryInfoVerified = true
+        } else {
+         showAlertController(withTitle: "Success", message: "Thank you for your order!", completionHandler: {
+            self.cartItems?.removeAll()
+            self.tableView.reloadData()
+         })
+        }
+    }
+    
     
     //MARK: - Private
     private func getCartItems() {

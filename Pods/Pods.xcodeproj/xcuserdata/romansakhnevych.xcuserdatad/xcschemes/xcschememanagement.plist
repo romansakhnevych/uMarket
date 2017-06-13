@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-uMarket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,10 +34,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1AD78DF5B48440F1F281E94B2F0E4DF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>21EC775386CBAC40BF1D515EC569DB1C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>902151C304157A23F07062EA88381957</key>
+		<key>363BBB7C4BE386D77075BCBE02FC2F20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -13,7 +13,7 @@ class WishListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let productItemCellIdentifier = String.init(describing: ProductItemCell.self)
-    var wishItems: [ProductItem]?
+    var wishItems: [ProductItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class WishListViewController: BaseViewController {
 extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return wishItems!.count;
+        return wishItems.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +55,7 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let productItemCell = cell as! ProductItemCell
-        let item = wishItems![indexPath.row]
+        let item = wishItems[indexPath.row]
         productItemCell.fillWithModel(model: item)
     }
     

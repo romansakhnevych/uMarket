@@ -75,7 +75,7 @@ extension CustomerProfileViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            return
+            self.dismiss(animated: true, completion: nil)
         }
         var identifier: String!
         switch indexPath.row {

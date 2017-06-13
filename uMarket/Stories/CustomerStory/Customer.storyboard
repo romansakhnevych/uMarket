@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ddg-2x-w10">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ddg-2x-w10">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,7 +33,7 @@
         <!--Customer Tab Bar Controller-->
         <scene sceneID="wQP-XQ-gFl">
             <objects>
-                <tabBarController id="BAm-vo-XNX" customClass="CustomerTabBarController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ctb" id="BAm-vo-XNX" customClass="CustomerTabBarController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dAF-qv-fTP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="jpr-rR-TAx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -77,7 +77,10 @@
                                     <constraint firstAttribute="height" constant="50" id="IB6-gO-m0Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
-                                <state key="normal" title="Checkout (Total - 3499 грн)"/>
+                                <state key="normal" title="Checkout (Total - 1999 грн)"/>
+                                <connections>
+                                    <action selector="checkOut:" destination="dsw-7H-1dq" eventType="touchUpInside" id="svj-0S-NMm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -94,6 +97,8 @@
                     <tabBarItem key="tabBarItem" title="CART" image="cart" id="kVP-3j-dAH"/>
                     <connections>
                         <outlet property="tableView" destination="mvg-2M-n3B" id="OSB-iz-T5E"/>
+                        <segue destination="tCp-9F-CJZ" kind="show" identifier="pay" id="5ym-f0-qRG"/>
+                        <segue destination="aBM-HR-m3R" kind="show" identifier="deliver" id="OEJ-Yh-Ne1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYb-TT-OsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,7 +236,7 @@
         <!--HISTORY-->
         <scene sceneID="eoN-GD-TI4">
             <objects>
-                <viewController id="31o-xz-3Vn" customClass="HistoryViewController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="31o-xz-3Vn" customClass="HistoryViewController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hdJ-gy-eYm"/>
                         <viewControllerLayoutGuide type="bottom" id="NKN-hZ-L1T"/>
@@ -239,7 +244,23 @@
                     <view key="view" contentMode="scaleToFill" id="k9n-Fw-6P1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="TQA-3W-57Y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="31o-xz-3Vn" id="OaQ-8s-4N8"/>
+                                    <outlet property="delegate" destination="31o-xz-3Vn" id="PBf-wR-lzd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TQA-3W-57Y" firstAttribute="leading" secondItem="k9n-Fw-6P1" secondAttribute="leading" id="0Lb-D9-OtY"/>
+                            <constraint firstItem="TQA-3W-57Y" firstAttribute="top" secondItem="hdJ-gy-eYm" secondAttribute="bottom" id="2Po-kb-9UK"/>
+                            <constraint firstItem="NKN-hZ-L1T" firstAttribute="top" secondItem="TQA-3W-57Y" secondAttribute="bottom" id="AHP-GT-Ifb"/>
+                            <constraint firstAttribute="trailing" secondItem="TQA-3W-57Y" secondAttribute="trailing" id="pbo-t4-dsI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HISTORY" id="q2K-VI-H2P">
                         <barButtonItem key="leftBarButtonItem" image="Back Filled-50" id="5fi-us-3kA">
@@ -248,6 +269,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="TQA-3W-57Y" id="YHR-wZ-d0O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erA-uh-MZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,7 +280,7 @@
         <!--DELIVERY INFO-->
         <scene sceneID="VKm-QT-DuZ">
             <objects>
-                <viewController id="aBM-HR-m3R" customClass="DeliveryInfoViewController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aBM-HR-m3R" customClass="DeliveryInfoViewController" customModule="uMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sfC-sy-e5a"/>
                         <viewControllerLayoutGuide type="bottom" id="cAi-4U-irr"/>
@@ -264,7 +288,43 @@
                     <view key="view" contentMode="scaleToFill" id="Syu-zx-BFk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dVs-Ei-ewM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="JIt-SQ-XMJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHH-Hd-HGo" customClass="CustomButton" customModule="uMarket" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="10" width="335" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="XlS-3T-VUz"/>
+                                            </constraints>
+                                            <state key="normal" title="SAVE"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="nHH-Hd-HGo" secondAttribute="trailing" constant="20" id="D53-wP-and"/>
+                                        <constraint firstItem="nHH-Hd-HGo" firstAttribute="leading" secondItem="JIt-SQ-XMJ" secondAttribute="leading" constant="20" id="L0d-OO-Phe"/>
+                                        <constraint firstItem="nHH-Hd-HGo" firstAttribute="top" secondItem="JIt-SQ-XMJ" secondAttribute="top" constant="10" id="M4p-vS-8Tv"/>
+                                        <constraint firstAttribute="bottom" secondItem="nHH-Hd-HGo" secondAttribute="bottom" constant="10" id="XCa-fI-Pg9"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="aBM-HR-m3R" id="Gne-8I-Whe"/>
+                                    <outlet property="delegate" destination="aBM-HR-m3R" id="oJR-WF-joM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dVs-Ei-ewM" firstAttribute="leading" secondItem="Syu-zx-BFk" secondAttribute="leading" id="47N-6G-PzI"/>
+                            <constraint firstItem="cAi-4U-irr" firstAttribute="top" secondItem="dVs-Ei-ewM" secondAttribute="bottom" id="h6G-of-HGJ"/>
+                            <constraint firstItem="dVs-Ei-ewM" firstAttribute="top" secondItem="sfC-sy-e5a" secondAttribute="bottom" id="men-iN-Fhx"/>
+                            <constraint firstAttribute="trailing" secondItem="dVs-Ei-ewM" secondAttribute="trailing" id="oqp-N4-cVh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DELIVERY INFO" id="GrZ-EN-hIe">
                         <barButtonItem key="leftBarButtonItem" image="Back Filled-50" id="5PC-b0-egI">
@@ -273,10 +333,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dVs-Ei-ewM" id="aP1-bH-ifU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1u6-tl-83H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="584"/>
+            <point key="canvasLocation" x="2149.5999999999999" y="583.3583208395803"/>
         </scene>
         <!--PAYMENT INFO-->
         <scene sceneID="kNB-Il-lTK">
@@ -294,11 +357,11 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentCell" id="wtn-24-KQr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentCell" id="wtn-24-KQr">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wtn-24-KQr" id="6TA-at-vrm">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -329,6 +392,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tv" destination="Hb8-sP-jG4" id="IdQ-VV-Sxw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKQ-Uv-dor" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -657,27 +723,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemPhotoCell" id="w9O-Yv-Cbf" customClass="ItemPhotoCell" customModule="uMarket" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1.5" width="364" height="247"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="364" height="247"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Business folio" translatesAutoresizingMaskIntoConstraints="NO" id="2C0-Sv-YyI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="247"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="2C0-Sv-YyI" secondAttribute="bottom" id="Ry1-dl-EoO"/>
-                                            <constraint firstAttribute="trailing" secondItem="2C0-Sv-YyI" secondAttribute="trailing" id="TDS-Ax-ukz"/>
-                                            <constraint firstItem="2C0-Sv-YyI" firstAttribute="top" secondItem="w9O-Yv-Cbf" secondAttribute="top" id="c5H-XP-Dgt"/>
-                                            <constraint firstItem="2C0-Sv-YyI" firstAttribute="leading" secondItem="w9O-Yv-Cbf" secondAttribute="leading" id="fva-3d-ugG"/>
-                                        </constraints>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="cqE-Oe-LV4" id="FD1-Up-Qns"/>
                                     <outlet property="delegate" destination="cqE-Oe-LV4" id="uft-dY-F2j"/>
@@ -766,6 +812,7 @@
                     <connections>
                         <outlet property="collectionView" destination="jhb-YO-kua" id="Qha-Xa-ZLR"/>
                         <outlet property="collectionViewHeightConstraint" destination="FnX-Yx-xMC" id="3eZ-1M-LUp"/>
+                        <outlet property="pageControl" destination="nUy-Fw-tV2" id="Pbk-yk-f7L"/>
                         <outlet property="tableView" destination="Gn5-f1-2As" id="5dH-tl-5E4"/>
                     </connections>
                 </viewController>
@@ -776,11 +823,14 @@
     </scenes>
     <resources>
         <image name="Back Filled-50" width="25" height="25"/>
-        <image name="Business folio" width="640" height="425"/>
         <image name="cart" width="25" height="25"/>
         <image name="categories" width="25" height="25"/>
         <image name="img" width="200" height="200"/>
         <image name="profile" width="25" height="25"/>
         <image name="wishList" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5ym-f0-qRG"/>
+        <segue reference="OEJ-Yh-Ne1"/>
+    </inferredMetricsTieBreakers>
 </document>

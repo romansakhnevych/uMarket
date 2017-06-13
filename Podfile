@@ -8,6 +8,8 @@ target 'uMarket' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'IQKeyboardManagerSwift'
+  pod 'RealmSwift'
 
   target 'uMarketTests' do
     inherit! :search_paths

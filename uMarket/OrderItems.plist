@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>totalPrice</key>
+		<string>1999 ГРН</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>feedbacks</key>
+				<array/>
+				<key>price</key>
+				<string>1 999 грн.</string>
+				<key>fullDescription</key>
+				<string>Изделие выполнено из плотной кожи толщиной 2 мм, что позволяет отлично сохранять форму. Клапан закрывается на вшитый магнит, благодаря этому у вас быстрый доступ к вместимому! на задней стенке карман закрывающийся на молнию!
+                Размеры:
+                335x240x40 mm
+                Вместит в себя ноутбук / документы а4 / журналы - в основной отдел
+                зарядное и мышку / кошек и телефон / ключи документы - в карман под молнией.</string>
+				<key>description</key>
+				<string>Изделие выполнено из плотной кожи толщиной 2 мм, что позволяет отлично сохранять форму. </string>
+				<key>name</key>
+				<string>Business folio</string>
+			</dict>
+		</array>
+		<key>additionalInfo</key>
+		<string></string>
+		<key>email</key>
+		<string>roman@gmail.com</string>
+		<key>mobile</key>
+		<string>0938475839</string>
+		<key>postcode</key>
+		<string>79045</string>
+		<key>appartment</key>
+		<string>6</string>
+		<key>building</key>
+		<string>40</string>
+		<key>street</key>
+		<string>Shevchenka</string>
+		<key>city</key>
+		<string>Lviv</string>
+		<key>country</key>
+		<string>Ukraine</string>
+		<key>user</key>
+		<dict>
+			<key>imageName</key>
+			<string>img</string>
+			<key>fullName</key>
+			<string>Roman Sakhnievych</string>
+			<key>username</key>
+			<string>@rsakhnievych</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>totalPrice</key>
+		<string>1200 ГРН</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>feedbacks</key>
+				<array/>
+				<key>price</key>
+				<string>399 грн.</string>
+				<key>fullDescription</key>
+				<string>Современные системы оплаты позволяют нам отказаться от купюр в целом. А если вы уже это сделали, то наш кардхолдер будет хорошим вариантом для хранения кредитных карт и пары купюр прозапас =)
+                Так же это отличный вариант для отпуска - когда большой кошелек просто не нужен !
+                - размер 97х87х6 мм
+                - два кармана для карт, каждый вместит 2-3 карты
+                - карман для купюр</string>
+				<key>description</key>
+				<string>Современные системы оплаты позволяют нам отказаться от купюр в целом. А если вы уже это сделали, то наш кардхолдер будет хорошим вариантом для хранения кредитных карт и пары купюр прозапас.</string>
+				<key>name</key>
+				<string>Cardholder</string>
+			</dict>
+		</array>
+		<key>additionalInfo</key>
+		<string></string>
+		<key>email</key>
+		<string>r.brass@gmail.com</string>
+		<key>mobile</key>
+		<string>0986785645</string>
+		<key>postcode</key>
+		<string>79057</string>
+		<key>appartment</key>
+		<string>3</string>
+		<key>building</key>
+		<string>7</string>
+		<key>street</key>
+		<string>Shevchenka</string>
+		<key>city</key>
+		<string>Lviv</string>
+		<key>country</key>
+		<string>Ukraine</string>
+		<key>user</key>
+		<dict>
+			<key>imageName</key>
+			<string>1</string>
+			<key>fullName</key>
+			<string>Pavlo Ivanov</string>
+			<key>username</key>
+			<string>ivanov</string>
+		</dict>
+	</dict>
+</array>
+</plist>

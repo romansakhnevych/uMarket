@@ -55,7 +55,24 @@
 					</dict>
 					<dict>
 						<key>feedbacks</key>
-						<array/>
+						<array>
+							<dict>
+								<key>feedback</key>
+								<string>Все зробили швидко і круто. Єдиний недолік це магнітна застібка.</string>
+								<key>authorName</key>
+								<string>Pavlo Ivanov</string>
+								<key>authorImageName</key>
+								<string>1</string>
+							</dict>
+							<dict>
+								<key>feedback</key>
+								<string>Зручний кейс, виконаний якісно. Рекомендую</string>
+								<key>authorName</key>
+								<string>Dmytriy Sheremeta</string>
+								<key>authorImageName</key>
+								<string>2</string>
+							</dict>
+						</array>
 						<key>price</key>
 						<string>1 999 грн.</string>
 						<key>fullDescription</key>
